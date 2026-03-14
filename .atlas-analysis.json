@@ -1,0 +1,60 @@
+{
+  "projectType": "saas",
+  "projectName": "Kamil (كامل)",
+  "projectDescription": "An Islamic Arabic text editor with Quran verse autocomplete, document management, and multi-format export capabilities.",
+  "theme": "willow",
+  "primaryColor": "#949494",
+  "lightColor": "#2d2d2d",
+  "darkColor": "#b7b7b7",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": ["introduction", "quickstart"]
+          },
+          {
+            "group": "Core Features",
+            "pages": [
+              "features/editor",
+              "features/quran-autocomplete",
+              "features/document-management",
+              "features/export"
+            ]
+          },
+          {
+            "group": "Reference",
+            "pages": [
+              "reference/keyboard-shortcuts",
+              "reference/configuration"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Rich Arabic text editor with full RTL support",
+    "Quran verse autocomplete via slash commands",
+    "Multi-page document management with IndexedDB persistence",
+    "Export to PDF, HTML, JSON, and Markdown",
+    "Text formatting: bold, italic, underline, font size, alignment",
+    "Pin favorite documents in the sidebar",
+    "Progressive Web App (PWA) support",
+    "Amiri Arabic font for authentic Islamic typography"
+  ],
+  "publicApiSurface": [
+    "exportToJSON(content, pageName) — export editor content as JSON",
+    "exportToHTML(content, pageName) — export editor content as HTML",
+    "exportToMarkdown(content, pageName) — export editor content as Markdown",
+    "exportToPDF(content, pageName) — export editor content as PDF via print dialog",
+    "db.pages — IndexedDB table for document storage (id, name, description, content, createdAt, updatedAt, isPinned)",
+    "editorPlugins — PlateJS plugin array (Bold, Italic, Underline, Align, Slash, Font)",
+    "EditorLayout — top-level editor component (editor, onChange)",
+    "EditorContent — editor body component (placeholder, className)",
+    "EditorToolbar — toolbar component (editor, className)",
+    "usePages() — React hook returning live array of all pages"
+  ]
+}
